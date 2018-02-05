@@ -39,10 +39,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnReturn" layoutX="136.0" layoutY="638.0" mnemonicParsing="false" onAction="#Calculator" prefHeight="35.0" prefWidth="209.0" text="Recipe Calculator">
-         <font>
-            <Font size="14.0" />
-         </font></Button>
       <Button fx:id="btnReload" layoutX="300.0" layoutY="577.0" mnemonicParsing="false" onAction="#Reload" prefHeight="30.0" prefWidth="150.0" text="Reload List">
          <font>
             <Font size="14.0" />

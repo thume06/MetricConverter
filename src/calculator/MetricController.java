@@ -15,7 +15,6 @@ public class MetricController implements Initializable, ControlledScreen {
     private boolean unloaded = true;
 
     ArrayList<MetricIngredient> metricArray = new ArrayList<MetricIngredient>();
-    static ArrayList<Ingredient> addList = new ArrayList<Ingredient>();
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
     Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
     TextInputDialog dialog = new TextInputDialog();
@@ -41,10 +40,6 @@ public class MetricController implements Initializable, ControlledScreen {
 
     public void setScreenParent(ScreensController screenParent){
         myController = screenParent;
-    }
-
-    @FXML public void Calculator(){
-        myController.setScreen(Main.screen1ID);
     }
 
     @FXML public void Add(){
@@ -177,8 +172,6 @@ public class MetricController implements Initializable, ControlledScreen {
         if (result.get() == buttonTypeCancel){
             return;
         }
-        addList.add(new Ingredient(metricArray.get(selectionIndex).getName(), metricArray.get(selectionIndex).StdtoGrams(standardUnit, standardAmount), "grams"));
-        toAdd = true;
     }
 
     @FXML public void Convert(){
@@ -212,8 +205,6 @@ public class MetricController implements Initializable, ControlledScreen {
             return;
         }
 
-        addList.add(new Ingredient(metricArray.get(selectionIndex).getName(), metricArray.get(selectionIndex).getStdAmnt(), metricArray.get(selectionIndex).getStdUnit()));
-        toAdd = true;
     }
 
     @FXML public void Load(){
@@ -312,12 +303,5 @@ public class MetricController implements Initializable, ControlledScreen {
             alert.showAndWait();
         }
 
-    }
-
-    public static boolean getToAdd(){
-        return toAdd;
-    }
-    public static void setToAdd(boolean a){
-        toAdd = a;
     }
 }

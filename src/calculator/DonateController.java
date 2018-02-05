@@ -26,7 +26,7 @@ public class DonateController implements Initializable, ControlledScreen{
     }
 
     @FXML public void calcScreen(){
-        myController.setScreen(Main.screen1ID);
+        myController.setScreen(Main.screen4ID);
     }
 
 
